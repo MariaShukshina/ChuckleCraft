@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.MainActivity">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="match_parent"
+        android:text="@string/welcome_text"
+        android:layout_margin="16dp"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_below="@id/welcomeTextView"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_height="1dp"
+        android:background="?attr/colorPrimaryVariant"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:entries="@array/categories"
+        android:layout_below="@id/welcomeTextView"
+        android:prompt="@string/prompt" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/generateJokeButton"
+        android:layout_marginTop="16dp"
+        android:text="@string/generate"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/welcomeTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/cosmicCatImageView"
+        android:layout_width="385dp"
+        android:layout_height="385dp"
+        android:layout_margin="12dp"
+        android:visibility="visible"
+        android:src="@drawable/ic_cosmic_cat"
+        android:layout_below="@id/spinner"
+        android:contentDescription="@string/laughing_cosmic_cat" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:indicatorColor="@color/purple"
+        app:trackColor="@color/light_purple"
+        android:indeterminate="true"
+        android:layout_below="@id/spinner"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorSize="50dp" />
+
+    <ScrollView
+        android:id="@+id/jokeScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/jokeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="@string/joke"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_below="@id/jokeScrollView"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/favoriteImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_favorite"
+            android:contentDescription="@string/favorite_icon" />
+
+        <ImageView
+            android:id="@+id/favoriteUncheckedImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_favorite_unchecked"
+            android:contentDescription="@string/favorite_icon" />
+
+        <ImageView
+            android:id="@+id/shareImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_share"
+            android:visibility="gone"
+            android:contentDescription="@string/share_icon" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:queryHint="Enter your own topic"
+            android:layout_marginBottom="16dp"
+            android:layout_height="48dp"
+            android:background="@drawable/searchview_background"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/generateCustomJokeButton"
+            android:layout_weight="0.05"
+            android:layout_marginTop="16dp"
+            android:text="@string/generate"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

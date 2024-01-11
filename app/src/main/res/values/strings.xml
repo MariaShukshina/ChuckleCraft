@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RandomJokeGenerator</string>
+    <string name="prompt">Choose joke category</string>
+    <string name="laughing_cosmic_cat">Laughing Cosmic Cat</string>
+    <string name="welcome_text">Cosmic Cat says Hi and Welcome to ChuckleCraft: Your Pocket Joke Generator!</string>
+    <string name="generate">Generate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorites">Favorites</string>
+    <string name="home">Home</string>
+    <string name="joke">Joke!</string>
+    <string name="favorite_icon">Favorite Icon</string>
+    <string name="delete_icon">Delete Icon</string>
+    <string name="share_icon">Share Icon</string>
+</resources>

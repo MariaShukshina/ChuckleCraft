@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item>Random Topic</item>
+        <item>Animals</item>
+        <item>Technology</item>
+        <item>Puns</item>
+        <item>Science</item>
+        <item>Relationships</item>
+        <item>Travel</item>
+        <item>Sports</item>
+        <item>Movies and TV shows</item>
+        <item>Work and Office</item>
+        <item>Holidays</item>
+        <item>School and Education</item>
+        <item>Music</item>
+        <item>Health and Fitness</item>
+        <item>Weather</item>
+        <item>Hobbies</item>
+        <item>Historical Events</item>
+        <item>Cultural References</item>
+        <item>Politics</item>
+        <item>Aliens</item>
+        <item>Money</item>
+        <item>Magic</item>
+        <item>Food</item>
+    </string-array>
+</resources>
